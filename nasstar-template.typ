@@ -80,7 +80,7 @@
     number-align: center,
     paper: "a4", 
     margin: 0pt,
-    background: image("image2.jpg", width: 100%, height: 100%)
+    background: image("media/image2.jpg", width: 100%, height: 100%)
   )
   set heading(numbering: "1.",)
   show heading.where(level: 1): set block(above: 2em, below: 1em)
@@ -130,7 +130,7 @@
   //  align(right, image(logo, width: 26%))
   //}
   place( dx: 0.8in, dy: 0.8in,
-    image("image1.png", width: 2.5in)
+    image("media/image1.png", width: 2.5in)
   )
   place(dx: 1in, dy: 7in,
     text(font: "Noto Sans", size: 28pt, weight: "semibold",[#doc-title]  )
@@ -185,7 +185,7 @@ set page(
       ]
     },
     footer: {
-    let logo = image("image7.png"m)  // swap for your logo file
+    let logo = image("media/image7.png")  // swap for your logo file
     let current = context counter(page).display()
     let total = context counter(page).final().first()
     block(width: 100%, inset: (y: -4pt))[
