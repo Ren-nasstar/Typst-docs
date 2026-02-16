@@ -145,7 +145,7 @@ To insert tables, insert from the toolbar for your desired size and then apply t
 
 #box(
   image(
-    "image4.png", height: 0.6423611111111112in, width: 6.268055555555556in,
+    "media/image4.png", height: 0.6423611111111112in, width: 6.268055555555556in,
   ),
 )
 
@@ -1160,3 +1160,6 @@ Insert full architecture diagram here — exported from Visio, Draw.io, or rende
 
 ========= Nasstar Heading 9 <nasstar-heading-9>
 #lorem(100)
+
+//adding in to test pdf
+//add test
