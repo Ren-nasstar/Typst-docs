@@ -1,0 +1,31 @@
+name: Build Typst Document
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Install Rust (stable)
+        uses: dtolnay/rust-toolchain@stable
+
+      - name: Install Typst CLI
+        run: cargo install typst-cli
+
+      - name: Build Typst PDF
+        run: |
+          mkdir -p build
+          typst compile main.typ build/document.pdf
+
+      - name: Upload PDF artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: document
+          path: build/document.pdf
